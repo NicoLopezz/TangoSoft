@@ -1,0 +1,152 @@
+.form-container label{
+    color: #000; /* Asegura que el texto sea negro */
+}
+
+
+/* Estilos de la sección de propuesta */
+.proposal-section {
+    padding: 3rem;
+    text-align: center;
+  }
+  
+  .dialog {
+    margin-bottom: 2rem;
+  }
+  
+  button {
+    margin-top: 20px;
+    background-color: #009579;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    transition: opacity 0.5s ease-in-out; /* Suaviza la transición de opacidad */
+
+  }
+  
+  button:hover {
+    background-color: #006653;
+  }
+  
+  /* Estilos para ocultar el formulario inicialmente */
+  .form-wrapper.hidden {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  /* Estilo para mostrar el formulario */
+  .form-wrapper.show {
+    height: auto;
+    opacity: 1;
+    transition: height 0.9s ease-in-out, opacity 0.9s ease-in-out;
+  }
+  
+  /* Contenedor centrado */
+  .container {
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    position: relative;
+  }
+  
+  /* Formulario */
+  .form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los botones horizontalmente */
+  }
+  
+  .form header {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form input {
+    height: 60px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 17px;
+    margin-bottom: 1.3rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+  }
+  
+  .form input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .form a {
+    font-size: 16px;
+    color: #009579;
+    text-decoration: none;
+  }
+  
+  .form a:hover {
+    text-decoration: underline;
+  }
+  
+  .form input.button {
+    color: #fff;
+    background: #009579;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 1.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+  }
+  
+  .form input.button:hover {
+    background: #006653;
+  }
+  
+  .signup {
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .signup a {
+    color: #009579;
+    cursor: pointer;
+  }
+  
+  .signup a:hover {
+    text-decoration: underline;
+  }
+  
+  .thank-you {
+    color: #fff; /* Cambia el color del texto a blanco */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100; /* Usa el peso Thin */
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.thank-you.show {
+    opacity: 1; /* Muestra el mensaje */
+}
+
+.scroll-section .thank-you,
+.scroll-section .thank-you * {
+    color: #fff !important; /* Asegura que todos los elementos hijos tengan texto en blanco */
+}

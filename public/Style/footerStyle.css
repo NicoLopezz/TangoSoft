@@ -1,0 +1,75 @@
+.footer {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* Usa el peso Thin */
+    background-position: center; /* Centra la imagen */
+    padding: 20px 0; /* Espaciado vertical */
+    color: #fff; /* Color de texto claro para contrastar con el fondo */
+    position: relative; /* Posicionamiento relativo para el pseudo-elemento */
+    margin: 0; /* Eliminar márgenes */
+    border: none; /* Asegurarse de que no haya borde */
+    background-color: black;
+
+}
+
+.footer::before {
+    content: ""; /* Pseudo-elemento para el fondo */
+    position: absolute; /* Posición absoluta para cubrir el footer */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura para mejorar la legibilidad */
+    z-index: 1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+}
+
+.footer .container {
+    max-width: 1200px; /* Ancho máximo */
+    margin: 0 auto; /* Centrado */
+    padding: 0 15px; /* Espaciado horizontal */
+    position: relative; /* Posicionamiento relativo para el contenido */
+    z-index: 2; /* Asegura que el contenido esté delante del fondo */
+    background-color: transparent; /* Quitar fondo blanco */
+
+}
+
+.footer h4,
+.footer p,
+.footer ul {
+    list-style-type: none; /* Elimina los puntos */
+    position: relative; /* Posicionamiento relativo para el texto */
+    z-index: 2; /* Asegura que el texto esté delante del fondo */
+}
+
+.footer ul li {
+    margin: 5px 0; /* Espaciado entre elementos de la lista */
+}
+
+.footer a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #cfcfcf; /* Color de los enlaces */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.footer .divider {
+    height: 1px; /* Altura de la línea divisoria */
+    background-color: #e0e0e0; /* Color de la línea divisoria */
+    margin: 20px 0; /* Espaciado vertical de la línea divisoria */
+}
+
+.footer .row {
+    display: flex; /* Flexbox para la disposición */
+    flex-wrap: wrap; /* Ajustar a múltiples líneas si es necesario */
+}
+
+.footer .col {
+    flex: 1; /* Cada columna ocupa igual espacio */
+    padding: 0 15px; /* Espaciado horizontal en columnas */
+    min-width: 200px; /* Ancho mínimo de las columnas */
+}
+
+.footer .center {
+    text-align: center; /* Centrado del texto */
+}

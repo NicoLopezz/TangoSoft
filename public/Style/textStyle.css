@@ -1,0 +1,164 @@
+.scroll-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('../imgs/Captura\ de\ pantalla\ 2024-09-24\ a\ la\(s\)\ 09.00.20.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda la sección */
+    background-position: center; /* Centra la imagen */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* Otras propiedades que puedas tener */
+    padding: 20px; /* Ajusta el padding según necesites */
+    color: white; /* Cambia el color del texto si es necesario */
+}
+
+.scroll-section::before {
+    content: ''; /* Crea un pseudo-elemento */
+    position: absolute; /* Posición absoluta para superponer sobre la imagen */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 11%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 95%);
+
+}
+
+.scroll-section * {
+    position: relative; /* Para asegurarse de que el contenido esté por encima del degradado */
+    z-index: 2; /* Asegura que el contenido esté por encima del pseudo-elemento */
+}
+
+.title-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.main-title, .sub-title {
+    width: 60%; /* Ajusta el ancho para centrar */
+    margin: 10px auto; /* Centra el subtítulo horizontalmente */
+    text-align: center; /* Justifica el texto al centro */
+}
+
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    transition: opacity 0.5s; /* Mantén solo la opacidad */
+    font-weight: 400; /* Usa el peso Thin */
+
+}
+
+.sub-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem; /* Cambia a un tamaño más grande */
+    transition: opacity 0.5s; /* Mantén solo la opacidad */
+    font-weight: 200; /* Usa el peso Thin */
+
+}
+
+.cta-btn {
+    margin-top: 100px; /* Espacio entre subtítulo y botón */
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    background-color: #007BFF; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Esquinas redondeadas */
+    position: relative;
+    z-index: 10; /* Asegúrate de que el botón esté encima de otros elementos */
+}
+
+.cta-btn:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
+
+.hide-btn {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Tamaño del botón de ocultar */
+}
+
+
+.thank-you {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* Usa el peso Thin */
+    color: black; /* Cambia el color si lo deseas */
+    text-align: center;
+    margin-top: 20px; /* Espacio superior */
+    transition: opacity 0.5s ease; /* Suaviza la transición */
+}
+
+.thank-you.hidden {
+    opacity: 0; /* Desvanecer */
+    display: none; /* Ocultar el mensaje */
+}
+
+.shrink .main-title,
+.shrink .sub-title {
+    opacity: 0; /* Desvanecer sin mover */
+}
+
+.form-container {
+    position: relative;
+    /* pointer-events: none; Evitar que se pueda interactuar mientras está oculto */
+
+}
+
+.form {
+    max-width: 1200px; /* Aumenta aún más el ancho del formulario */
+    height: 600px; /* Aumenta la altura del formulario */
+    margin: 20px auto;
+    padding: 30px; /* Aumenta el padding para más espacio */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: max-height 0.5s, opacity 0.5s ease-in-out;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.form.show {
+    max-height: 700px; /* Cambia la altura máxima al mostrar */
+    opacity: 1;
+}
+
+.form.hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+label, input, textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 15px; /* Aumenta el padding en los campos de entrada */
+    font-size: 1.5rem; /* Aumenta el tamaño de fuente */
+}
+
+.hide-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hide-btn:hover {
+    background-color: #FF4C4C;
+}
