@@ -177,4 +177,253 @@ body, html {
     /* Puedes agregar más estilos si lo necesitas, como tamaño, margen, etc. */
 }
 
-/* Tango Nexo ofrece integración con otros productos de la suite Tango, como Tango Gestión, para automatizar procesos empresariales y mantener sincronizados los sistemas locales con la nube. Es una solución útil para aquellas empresas que buscan mejorar la eficiencia de su administración documental y mantener a sus clientes informados de manera digital​ */
+/* Estilo para dispositivos móviles y tablets (pantallas pequeñas) */
+@media (max-width: 768px) {
+
+    .square-container{
+        width: auto;
+        height: 100vh;
+        background-image: url(../imgs/university-03.jpg);
+        position: relative;
+        color: #f0f0f0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    .block1, .block2, .block3, .block4, .block5 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200; /* Usa el peso Thin */
+        transition: transform 0.3s ease-in-out; /* Suaviza la transición */
+        height: 20%;  /* Cada bloque ocupa el 20% de la pantalla */
+        position: absolute; /* Mantiene la posición absoluta */
+        display: flex; /* Activa el modo grid */
+        z-index: 1; /* Asegura que se muestren sobre el triángulo */
+        justify-content: flex-end;
+        text-align: center;
+        place-items: center; /* Centra los elementos en ambas direcciones */
+        transform: translateX(0); /* Asegúrate de que la posición inicial sea 0 */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0; /* Sin márgenes entre los bloques */
+        padding: 0; /* Elimina el relleno */
+        border-radius: 0; /* Asegura que no haya bordes redondeados */
+    }
+
+    /* Ajusta el tamaño de los títulos, subtítulos y otros elementos para pantallas pequeñas */
+    .subTitle {
+        font-size: 2vh; /* Reduce el tamaño del subtítulo */
+        padding: 0.5rem; /* Añade un poco de espacio */
+    }
+
+    .logoTango-W {
+        width: 8vh; /* Reduce el tamaño del logo */
+        height: auto; /* Mantiene la proporción */
+        margin: 0 auto; /* Centra la imagen */
+    }
+
+    /* Ajustar tamaño de la imagen y las flechas */
+    .imgRow, .imgRow2 {
+        width: 1.5vh; /* Reduce el tamaño de las flechas */
+        height: auto;
+    }
+
+    /* Expansión al hacer clic */
+    .block-expanded {
+        width: 100%;
+        height: 100vh; /* El bloque seleccionado ocupa toda la pantalla */
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .logoTangoSoft {
+        margin-top: 5%;
+        margin-left: 1%;
+        width: auto;  /* Ajusta el ancho según sea necesario */
+        height: 8%;  /* Mantiene la relación de aspecto */
+        position: fixed;
+        z-index: 10;
+    }
+
+    .square-container{
+        width: auto;
+        height: 100vh;
+        background-image: url(../imgs/university-03.jpg);
+        position: relative;
+        color: #f0f0f0;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Bloque 1 con 70% de ancho */
+    .block1 {
+        width: 95%;
+        height: 20%; /* Cada bloque sigue ocupando el 20% de la altura */
+        position: absolute;
+    }
+
+    /* Bloque 2 con 60% de ancho */
+    .block2 {
+        width: 83%;
+        height: 20%;
+        position: absolute;
+
+    }
+
+    /* Bloque 3 con 50% de ancho */
+    .block3 {
+        width: 75%;
+        height: 20%;
+        position: absolute;
+    }
+
+    /* Bloque 4 con 40% de ancho */
+    .block4 {
+        width: 65%;
+        height: 20%;
+        position: absolute;
+    }
+
+    /* Bloque 5 con 30% de ancho */
+    .block5 {
+        width: 55%;
+        height: 20%;
+        position: absolute;
+    }
+
+    /* Ajuste de tamaños de los subtítulos, imágenes, etc. */
+    .subTitle {
+        font-size: 2vh; /* Reduce el tamaño del subtítulo */
+        padding: 0.5rem; /* Espaciado ajustado */
+    }
+
+    .logoTango-W {
+        width: 8vh; /* Ajusta el tamaño del logo */
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .imgRow, .imgRow2 {
+        width: 1.5vh;
+        height: auto;
+    }
+
+
+    .scroll-section {
+        padding: 20px !important; /* Añade relleno alrededor del contenido */
+        text-align: center !important; /* Centra todo el texto y los botones */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Título principal */
+    .main-title {
+        width: auto !important;
+        font-size: 4vh !important; /* Ajusta el tamaño del título para que sea más pequeño en móviles */
+        margin-top: 20px !important;
+        line-height: 1.2 !important; /* Ajusta el interlineado para mejor legibilidad */
+        padding: 0 10px !important; /* Añade un poco de relleno lateral */
+        
+    }
+
+    /* Subtítulo */
+    .sub-title {
+        font-size: 2vh !important; /* Ajusta el tamaño del subtítulo */
+        margin-bottom: 50px !important; /* Añade espacio debajo del subtítulo */
+        padding: 0 10px !important; /* Añade un poco de relleno lateral */
+        line-height: 1.5 !important; /* Aumenta el espacio entre líneas para mejor lectura */
+    }
+
+    /* Botón de llamada a la acción (Agendar Reunión) */
+    .cta-btn {
+        font-size: 2vh !important; /* Ajusta el tamaño del botón */
+        padding: 12px 20px !important; /* Añade un poco más de espacio alrededor del texto del botón */
+        margin-bottom: 20px !important; /* Espacio debajo del botón */
+        background-color: #007bff !important; /* Color de fondo del botón */
+        color: #fff !important; /* Color del texto del botón */
+        border: none !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    .cta-btn:hover {
+        background-color: #0056b3 !important; /* Cambia el color al pasar el mouse */
+    }
+
+    /* Contenedor del formulario */
+    .form-container {
+        width: 100% !important; /* El formulario ocupará el ancho total */
+        max-width: 400px !important; /* Establece un ancho máximo para no ser demasiado grande */
+        margin: 0 auto !important; /* Centra el formulario */
+    }
+
+    /* Formulario */
+    .form {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Inputs del formulario */
+    input, textarea {
+        width: 100% !important; /* Ocupar el 100% del ancho del contenedor */
+        padding: 10px !important; /* Espaciado interno */
+        margin-bottom: 15px !important; /* Espacio entre los campos */
+        border: 1px solid #ccc !important;
+        border-radius: 5px !important;
+    }
+
+    /* Botón de enviar */
+    button[type="submit"] {
+        font-size: 2vh !important; /* Tamaño del texto del botón */
+        padding: 10px 20px !important;
+        background-color: #28a745 !important; /* Color de fondo */
+        color: #fff !important; /* Color del texto */
+        border: none !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #218838 !important; /* Cambia el color al pasar el mouse */
+    }
+
+    /* Botón para ocultar el formulario */
+    .hide-btn {
+        font-size: 1.8vh !important;
+        padding: 5px 15px !important;
+        background-color: #dc3545 !important; /* Color de fondo */
+        color: #fff !important; /* Color del texto */
+        border: none !important;
+        border-radius: 5px !important;
+        cursor: pointer !important;
+        margin-bottom: 15px !important; /* Añade un espacio debajo del botón */
+    }
+
+    .hide-btn:hover {
+        background-color: #c82333 !important; /* Cambia el color al pasar el mouse */
+    }
+
+    /* Mensaje de agradecimiento */
+    .thank-you {
+        font-size: 2vh !important;
+        color: #fff !important;
+        padding: 15px !important;
+        border-radius: 5px !important;
+        margin-top: 20px !important;
+        text-align: center !important;
+    }
+}

@@ -1,22 +1,3 @@
-// Precarga las imágenes para evitar el retardo
-const preloadImages = (imageUrls) => {
-    imageUrls.forEach(url => {
-        const img = new Image();
-        img.src = url;
-    });
-};
-
-// Array de URLs de las imágenes
-const imageUrls = [
-    "../public/imgs/barSoftL.jpg",
-    "../public/imgs/estudioContableL.jpeg", 
-    "../public/imgs/tangoGestion.jpg", 
-    
-];
-
-// Llama a la función para precargar todas las imágenes
-preloadImages(imageUrls);
-
 
 
 // Selecciona todos los elementos de flecha
@@ -62,6 +43,10 @@ arrows2.forEach(arrow2 => {
 
         // Luego, vuelve a mover el bloque a su posición original
         block.style.transform = 'translateX(0)';
+        block.style.opacity = '1';
+
+        // Cambia el color de fondo del triángulo y el fondo del body
+        changeBackground(block);
     });
 });
 
